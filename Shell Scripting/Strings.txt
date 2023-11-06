@@ -1,1 +1,16 @@
+#!/bin/bash
+
+myVar="hello how are u?"
+len=${#myVar}
+echo "${len}"
+echo "Uppercase ${myVar^^}"
+echo "Lowercase ${myVar,,}"
+
+#Replace
+newVar=${myVar/hello/Hi}
+echo "${newVar}"
+
+#Slice
+newVar1=${myVar:6:3}   #from index 6 with length 3
+echo "${newVar1}"
 
