@@ -1,0 +1,25 @@
+#!/bin/bash
+
+<<comment
+This is cmt line
+for multiple line cmt
+comment
+
+set -x
+set -e
+
+echo "Hello All"
+
+name="Amar"
+age="23"
+# name="AMAR"
+# echo "My name is ${name}, Age: ${age}"
+
+# Var can be used to save output of any cmd
+cmd=$(free)
+# echo "${cmd}"
+
+# Readonly var
+#readonly VAR1="My Var1"
+#VAR1="Changing"
+#echo "${VAR1}"
