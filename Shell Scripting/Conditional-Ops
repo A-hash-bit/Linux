@@ -1,0 +1,53 @@
+#!/bin/bash
+
+<<comment
+If statement
+read -p "Enter a no:" x
+
+if [[ $x -gt 30 ]]
+then
+        echo "GT"
+elif [[ $x -lt 30 ]]
+then
+        echo "LT"
+else
+        echo "EQ"
+fi
+comment
+
+<<comment
+Case statement
+echo "Choose an option"
+echo "Enter a to see date"
+echo "Enter b to see files in current dir"
+echo "Enter c to see current path"
+read choice
+case $choice in
+        a) date;;
+        b)
+               echo "Files in Current path are:"
+               ls
+               ;;
+        c) pwd;;
+        *) echo "Not valid input"
+esac
+comment
+
+<<comment
+Logical operators (||, &&)
+read -p "Enter your age:" age
+read -p "Enter your country name:" country
+if [[ $age -gt 18 ]] && [[ $country == "India" ]]
+then 
+        echo "Allowed"
+else
+        echo "Not allowed"
+fi
+comment
+
+<<comment 
+conditional operator
+cont1 && cond2 || cond3
+comment
+age=18
+[[ $age -gt 18 ]] && echo "Adult" || echo "Minor"
